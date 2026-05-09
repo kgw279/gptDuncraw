@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>gptDuncraw</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <p class="eyebrow">Minimal browser dungeon crawler</p>
+        <h1>gptDuncraw</h1>
+        <p>
+          Procedurally generated rooms and corridors rendered with simple graphical tiles.
+        </p>
+      </header>
+
+      <section class="game-layout" aria-label="Dungeon preview">
+        <div class="panel map-panel">
+          <div class="panel-header">
+            <div>
+              <h2>Generated Dungeon</h2>
+              <p id="generation-summary">Preparing dungeon...</p>
+            </div>
+            <button id="regenerate" type="button">Regenerate</button>
+          </div>
+          <div id="dungeon-map" class="dungeon-map" role="img" aria-label="Generated dungeon map"></div>
+        </div>
+
+        <aside class="panel notes-panel">
+          <h2>Generation Rules</h2>
+          <ul id="generation-rules">
+            <li>Start with solid rock.</li>
+            <li>Place non-overlapping rectangular rooms.</li>
+            <li>Connect accepted rooms with L-shaped corridors.</li>
+            <li>Spawn the player in the first room.</li>
+            <li>Place stairs in the final room.</li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
